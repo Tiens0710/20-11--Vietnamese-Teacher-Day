@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>women's day</title>
+    <title>Chúc mừng Ngày Nhà giáo Việt Nam 20/11</title>
     <!-- Google Fonts: Quicksand -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap-grid.min.css"
@@ -36,7 +36,7 @@
                 height: 100vh;
                 padding: 10px;
             }
-            
+
             .container svg {
                 width: 90%;
                 height: 90%;
@@ -64,7 +64,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #fae1dd;
+            background-color: #f5eedf;
         }
 
         .letter {
@@ -72,7 +72,7 @@
             z-index: 1;
         }
 
-        .valentines {
+        .envelope-interaction {
             position: relative;
             top: 50px;
             cursor: pointer;
@@ -96,11 +96,11 @@
             position: relative;
             width: 300px;
             height: 200px;
-            background-color: #f08080;
+            background-color: #346353;
         }
 
         .envelope:before {
-            background-color: #f08080;
+            background-color: #346353;
             content: "";
             position: absolute;
             width: 212px;
@@ -113,7 +113,7 @@
 
         .card {
             position: absolute;
-            background-color: #eae2b7;
+            background-color: #fff5dd;
             width: 270px;
             height: 170px;
             top: 5px;
@@ -124,7 +124,7 @@
         .card:before {
             content: "";
             position: absolute;
-            border: 3px solid #003049;
+            border: 3px solid #294f42;
             border-style: dotted;
             width: 240px;
             heighT: 140px;
@@ -134,143 +134,49 @@
 
         .text {
             position: absolute;
-            font-family: 'Brush Script MT', cursive;
-            font-size: 28px;
+            font-family: Arial, sans-serif;
+            font-size: 26px;
             text-align: center;
-            line-height: 25px;
-            top: 19px;
-            left: 85px;
-            color: #003049;
+            line-height: 1.2;
+            top: 30px;
+            inset-inline: 12px;
+            color: #294f42;
         }
 
-        .heart {
-            background-color: #d62828;
-            display: inline-block;
-            height: 30px;
-            margin: 0 10px;
-            position: relative;
-            top: 110px;
-            left: 105px;
-            transform: rotate(-45deg);
-            width: 30px;
+        .card-date {
+            display: block;
+            margin-top: 6px;
+            color: #795721;
+            font: 700 14px Georgia, serif;
+            letter-spacing: .1em;
         }
 
-        .heart:before,
-        .heart:after {
-            content: "";
-            background-color: #d62828;
-            border-radius: 50%;
-            height: 30px;
+        .petals {
             position: absolute;
-            width: 30px;
+            inset: 0;
+            pointer-events: none;
         }
 
-        .heart:before {
-            top: -15px;
-            left: 0;
-        }
-
-        .heart:after {
-            left: 15px;
-            top: 0;
-        }
-
-        .hearts {
+        .petals span {
             position: absolute;
-            top: 0
-        }
-
-        .one,
-        .two,
-        .three,
-        .four,
-        .five {
-            background-color: red;
-            display: inline-block;
-            height: 10px;
-            margin: 0 10px;
-            position: relative;
-            transform: rotate(-45deg);
+            top: 25px;
+            left: var(--petal-x);
             width: 10px;
-            top: 50px;
+            height: 16px;
+            border-radius: 85% 10% 85% 20%;
+            background: #c18b39;
+            animation: petal-rise 2.8s ease-out var(--petal-delay) infinite;
         }
 
-        .one:before,
-        .one:after,
-        .two:before,
-        .two:after,
-        .three:before,
-        .three:after,
-        .four:before,
-        .four:after,
-        .five:before,
-        .five:after {
-            content: "";
-            background-color: red;
-            border-radius: 50%;
-            height: 10px;
-            position: absolute;
-            width: 10px;
-        }
-
-        .one:before,
-        .two:before,
-        .three:before,
-        .four:before,
-        .five:before {
-            top: -5px;
-            left: 0;
-        }
-
-        .one:after,
-        .two:after,
-        .three:after,
-        .four:after,
-        .five:after {
-            left: 5px;
-            top: 0;
-        }
-
-        .one {
-            left: 10px;
-            animation: heart 1s ease-out infinite;
-        }
-
-        .two {
-            left: 30px;
-            animation: heart 2s ease-out infinite;
-        }
-
-        .three {
-            left: 50px;
-            animation: heart 1.5s ease-out infinite;
-        }
-
-        .four {
-            left: 70px;
-            animation: heart 2.3s ease-out infinite;
-        }
-
-        .five {
-            left: 90px;
-            animation: heart 1.7s ease-out infinite;
-        }
-
-        @keyframes heart {
-            0% {
-                transform: translateY(0) rotate(-45deg) scale(0.3);
-                opacity: 1;
-            }
-
-            100% {
-                transform: translateY(-150px) rotate(-45deg) scale(1.3);
-                opacity: 0.5;
-            }
+        @keyframes petal-rise {
+            from { transform: rotate(25deg) scale(.5); opacity: 0; }
+            25% { opacity: .9; }
+            to { transform: translate(35px, -140px) rotate(150deg); opacity: 0; }
         }
 
         .front {
             position: absolute;
-            border-right: 180px solid #f4978e;
+            border-right: 180px solid #437563;
             border-top: 95px solid transparent;
             border-bottom: 100px solid transparent;
             left: 120px;
@@ -283,7 +189,7 @@
         .front:before {
             position: absolute;
             content: "";
-            border-left: 300px solid #f8ad9d;
+            border-left: 300px solid #548472;
             border-top: 195px solid transparent;
             left: -120px;
             top: -95px;
@@ -321,10 +227,29 @@
 
         #castle {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background-color: #fae1dd;
+            min-height: 100svh;
+            padding-block: 24px 42px;
+            background-color: #f5eedf;
+        }
+
+        #castle .letter {
+            margin-top: 132px;
+            margin-bottom: 72px;
+        }
+
+        #castle .envelope-interaction {
+            top: 0;
+        }
+
+        #castle .card {
+            z-index: 1;
+        }
+
+        #castle .shadow {
+            top: 215px;
         }
 
         .dustDef {
@@ -421,10 +346,21 @@
             z-index: 1;
         }
 
-        text {
-            fill: #e6668a;
-            font-family: consolas;
-            font-size: 9px;
+        #theSvg {
+            position: static;
+            flex: none;
+            width: min(450px, calc(100% - 24px));
+            height: auto;
+            margin: 0;
+            overflow: visible;
+            pointer-events: none;
+        }
+
+        #theSvg text {
+            fill: #795721;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            font-weight: 600;
         }
 
         p {
@@ -501,15 +437,15 @@
 
         .textLetter h2 {
             font-size: 30px;
-            font-family: 'Dancing Script', cursive;
+            font-family: Arial, sans-serif;
         }
 
         .textLetter .contentLetter {
             font-size: 19px;
             text-align: center;
-            padding: 0px 30px;
+            padding: 0 16px;
             margin-top: 10px;
-            font-family: 'Dancing Script', cursive;
+            font-family: Arial, sans-serif;
             position: initial;
 
         } */
@@ -545,9 +481,9 @@
 }
 .boxLetter .formLetter{
     position: relative;
-    width: 600px;
-    height: 350px;
-    background-color: #FFEBEB;
+    width: min(600px, calc(100% - 42px));
+    height: min(350px, calc(100% - 48px));
+    background-color: #fff7e6;
     border-radius: 20px;
     z-index: 100;
     padding: 20px 15px;
@@ -557,78 +493,25 @@
     position: relative;
     width: 100%;
     height: 100%;
-    border: 2px dashed #FF6666;
+    border: 1px solid #95713b;
     border-radius: inherit;
+    overflow: auto;
     display: flex;
 }
 .boxLetter .before{
     position: absolute;
-    width: 600px;
-    height: 350px;
+    width: min(600px, calc(100% - 42px));
+    height: min(350px, calc(100% - 48px));
     background: #fff;
     transform: rotate(-15deg);
     border-radius: 20px;
     z-index: 10;
 }
-.formLetter .heartLetter{
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: #FFEBEB;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-}
-.heartLetter .heartLetterItem{
-    position: relative;
-    width: 10px;
-    height: 10px;
-    transform: rotate(45deg);
-    background: #FF6666;
-}
-.heartLetter:first-child{
-    right: 5px;
-    top: 10px;
-}
-.heartLetter:nth-child(2){
-    left: 5px;
-    bottom: 10px;
-}
-.heartLetterItem::before, .heartLetterItem::after{
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: inherit;
-}
-.heartLetterItem::before{
-    top: -50%;
-}
-.heartLetterItem::after{
-    left: -50%;
-}
-.giftbox{
-    position: relative;
-    width: 40%;
-    height: 100%;
-}
-.giftbox .img{
-    position: absolute;
-    width: 100px;
-    top: 5px;
-    left: 10px;
-    z-index: 100;
-}
-.giftbox img{
-    width: 100%;
-}
 .textLetter {
             width: 100%;
             flex-direction: column;
-            justify-content: center;
+            margin: auto;
+            padding-block: 14px;
             display: flex;
             align-items: center;
             user-select: none;
@@ -636,15 +519,15 @@
 
         .textLetter h2 {
             font-size: 30px;
-            font-family: 'Dancing Script', cursive;
+            font-family: Arial, sans-serif;
         }
 
         .textLetter .contentLetter {
             font-size: 19px;
             text-align: center;
-            padding: 0px 30px;
+            padding: 0 16px;
             margin-top: 10px;
-            font-family: 'Dancing Script', cursive;
+            font-family: Arial, sans-serif;
             position: initial;
 
         }
@@ -659,38 +542,14 @@
 .show{
     display: block;
 }
-.heartAnimation{
-    position: absolute;
-    width: 200px;
-    bottom: 0;
-}
-.heartAnimation img{
-    width: 100%;
-}
-.mewmew1, .mewmew2{
-    position: absolute;
-    width: 90px;
-}
-.mewmew1{
-    bottom: 0;
-    left: 0;
-}
-.mewmew2{
-    bottom: 0;
-    right: 0;
-}
-.mewmew1 img, .mewmew2 img{
-    width: 100%;
-}
-
-/* CSS cho giao diện Tặng nè */
+/* CSS cho giao diện Gửi tặng thầy cô */
 .gift-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #f5f5f5;
+    background: #f5eedf;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -706,48 +565,49 @@
 }
 
 .gift-title {
-    font-size: 44px;
-    color: #ff6b9d;
+    font-size: clamp(28px, 7vw, 44px);
+    color: #294f42;
     font-weight: 700;
     letter-spacing: 1px;
     margin-bottom: 16px;
     text-align: center;
-    text-shadow: 0 2px 12px #ffd6e6;
+    text-shadow: none;
 }
 
 .gift-card {
-    width: 320px;
-    height: 320px;
-    background: #fff;
-    border-radius: 28px;
-    border: none;
+    width: min(360px, 86vw);
+    aspect-ratio: 1;
+    padding: 8px;
+    background: #fffaf0;
+    border-radius: 24px;
+    border: 1px solid #d9c8a8;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    position: relative;
+    transition: transform .3s ease;
     overflow: hidden;
-    box-shadow: 0 0 32px 8px #ffd6e6;
 }
 
 .gift-card:hover {
-    transform: scale(1.04);
-    box-shadow: 0 0 40px 12px #ffb3d9;
+    transform: translateY(-2px);
+}
+
+.gift-card:focus-visible {
+    outline: 3px solid #346353;
+    outline-offset: 5px;
 }
 
 .gift-card img {
-    width: 90%;
-    height: 90%;
-    object-fit: contain;
-    border-radius: 20px;
-    background: #fff;
-    box-shadow: 0 0 0 8px #fff, 0 0 24px 0 #ffd6e6;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 17px;
 }
-
 .gift-subtitle {
     font-size: 20px;
-    color: #ffb3d9;
+    color: #75562d;
     font-style: italic;
     text-align: center;
     margin-top: 8px;
@@ -755,24 +615,315 @@
 }
 
     </style>
+    <style>
+        /* Reveal the complete layout at once so the sheet stays still as words appear. */
+        .wrapperLetterForm {
+            position: fixed;
+            height: 100dvh;
+            background: rgba(20, 37, 30, .68);
+        }
+
+        .wrapperLetterForm.is-open {
+            animation: letter-backdrop-in 200ms ease-out both;
+        }
+
+        .is-open .formLetter {
+            animation: letter-unfold 480ms cubic-bezier(.16, 1, .3, 1) both;
+            transform-origin: center bottom;
+        }
+
+        .is-open .before {
+            animation: letter-backing-in 560ms cubic-bezier(.16, 1, .3, 1) both;
+        }
+
+        .is-open .textLetter h2 {
+            animation: letter-heading-in 360ms 80ms ease-out both;
+        }
+
+        .letter-word {
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        .letter-character {
+            position: relative;
+            display: inline-block;
+            animation: letter-character-in 240ms var(--character-delay) ease-out both;
+        }
+
+        .letter-character::after {
+            content: "";
+            position: absolute;
+            right: -2px;
+            top: .12em;
+            height: 1em;
+            width: 1px;
+            background: #95713b;
+            opacity: 0;
+            animation: letter-caret var(--character-step) var(--character-delay) step-end;
+            pointer-events: none;
+        }
+
+        @keyframes letter-character-in {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes letter-caret {
+            0%, 99% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        .textLetter .contentLetter {
+            line-height: 1.65;
+        }
+
+        @keyframes letter-backdrop-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes letter-unfold {
+            from { opacity: 0; transform: translateY(26px) scale(.94) rotate(-2deg); }
+            to { opacity: 1; transform: translateY(0) scale(1) rotate(0); }
+        }
+
+        @keyframes letter-backing-in {
+            from { opacity: 0; transform: translateY(18px) rotate(-5deg) scale(.94); }
+            to { opacity: 1; transform: translateY(0) rotate(-15deg) scale(1); }
+        }
+
+        @keyframes letter-heading-in {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes letter-word-in {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .wrapperLetterForm.is-open,
+            .is-open .formLetter,
+            .is-open .before,
+            .is-open .textLetter h2,
+            .letter-character, .letter-character::after {
+                animation: none;
+            }
+        }
+    </style>
+    <style>
+        .letter-effects {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 20;
+        }
+
+        .letter-petal {
+            position: absolute;
+            top: -24px;
+            left: var(--petal-left);
+            width: var(--petal-size);
+            height: calc(var(--petal-size) * 1.5);
+            border-radius: 80% 12% 80% 20%;
+            background: var(--petal-color);
+            opacity: 0;
+            animation: letter-petal-fall var(--petal-duration) var(--petal-delay) ease-in-out both;
+        }
+
+        .is-open .formLetter::before,
+        .is-open .formLetter::after {
+            content: "";
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            background: #c79b51;
+            clip-path: polygon(50% 0, 60% 38%, 100% 50%, 60% 62%, 50% 100%, 40% 62%, 0 50%, 40% 38%);
+            pointer-events: none;
+            animation: letter-sparkle 1.8s 450ms ease-in-out 3 both;
+        }
+
+        .is-open .formLetter::before { top: 13px; left: 13px; }
+        .is-open .formLetter::after {
+            right: 13px;
+            bottom: 13px;
+            animation-delay: 1s;
+        }
+
+        .wrapperLetterForm .fa-xmark { z-index: 200; }
+
+        @keyframes letter-petal-fall {
+            0% { opacity: 0; transform: translate3d(0, -20px, 0) rotate(0); }
+            12% { opacity: .8; }
+            75% { opacity: .65; }
+            100% { opacity: 0; transform: translate3d(var(--petal-drift), 100dvh, 0) rotate(300deg); }
+        }
+
+        @keyframes letter-sparkle {
+            0%, 100% { opacity: .25; transform: scale(.6) rotate(0); }
+            50% { opacity: 1; transform: scale(1.15) rotate(45deg); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .letter-effects { display: none; }
+            .is-open .formLetter::before,
+            .is-open .formLetter::after { animation: none; }
+        }
+    </style>
+    <style>
+        .gift-overlay {
+            height: 100dvh;
+            overflow: auto;
+        }
+
+        .gift-container {
+            padding-block: 28px;
+        }
+
+        .gift-title {
+            animation: cover-text-in 650ms cubic-bezier(.16, 1, .3, 1) both;
+        }
+
+        .gift-card {
+            animation: cover-image-in 800ms 120ms cubic-bezier(.16, 1, .3, 1) backwards;
+            transition: transform 300ms ease, box-shadow 300ms ease;
+        }
+
+        .gift-card img {
+            transition: transform 550ms cubic-bezier(.16, 1, .3, 1);
+        }
+
+        .gift-subtitle {
+            animation: cover-text-in 650ms 320ms cubic-bezier(.16, 1, .3, 1) backwards;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            .gift-card:hover {
+                transform: translateY(-5px) rotate(-1deg);
+                box-shadow: 0 12px 28px rgba(41, 79, 66, .12);
+            }
+
+            .gift-card:hover img {
+                transform: scale(1.035);
+            }
+        }
+
+        .gift-card:active {
+            transform: scale(.975);
+        }
+
+        @keyframes cover-text-in {
+            from { opacity: 0; transform: translateY(14px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes cover-image-in {
+            from { opacity: 0; transform: translateY(28px) scale(.94) rotate(2deg); }
+            to { opacity: 1; transform: translateY(0) scale(1) rotate(0); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .gift-title, .gift-card, .gift-subtitle {
+                animation: none;
+            }
+
+            .gift-card, .gift-card img {
+                transition: none;
+            }
+
+            .gift-card:hover, .gift-card:active, .gift-card:hover img {
+                transform: none;
+            }
+        }
+    </style>
+    <style>
+        .gift-card {
+            position: relative;
+            animation:
+                cover-image-in 800ms 120ms cubic-bezier(.16, 1, .3, 1) backwards,
+                cover-float 4.2s 920ms ease-in-out infinite;
+        }
+
+        .chalk-dust {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            border-radius: inherit;
+            overflow: hidden;
+        }
+
+        .chalk-dust span {
+            position: absolute;
+            left: var(--dust-x);
+            top: var(--dust-y);
+            width: var(--dust-size);
+            height: var(--dust-size);
+            border-radius: 50%;
+            background: #fff9dc;
+            opacity: 0;
+            animation: chalk-drift 4s var(--dust-delay) ease-in-out infinite;
+        }
+
+        .gift-subtitle {
+            animation:
+                cover-text-in 650ms 320ms cubic-bezier(.16, 1, .3, 1) backwards,
+                cover-hint 2.6s 1s ease-in-out infinite;
+        }
+
+        @keyframes cover-float {
+            0%, 100% { translate: 0 0; }
+            50% { translate: 0 -8px; }
+        }
+
+        @keyframes chalk-drift {
+            0%, 100% { opacity: 0; transform: translateY(5px) scale(.5); }
+            30% { opacity: .8; }
+            65% { opacity: .45; transform: translateY(-14px) scale(1); }
+            90% { opacity: 0; transform: translateY(-25px) scale(.5); }
+        }
+
+        @keyframes cover-hint {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .55; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .gift-card, .gift-subtitle { animation: none; }
+            .chalk-dust { display: none; }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Giao diện Tặng nè -->
+    <!-- Giao diện Gửi tặng thầy cô -->
     <div id="giftOverlay" class="gift-overlay">
         <div class="gift-container">
-            <div class="gift-title">Tặng nè</div>
-            
-            <div class="gift-card" onclick="hideGiftOverlay()">
-                <img src="./image/tho.jpg" alt="Ảnh quà tặng">
-            </div>
+            <div class="gift-title">Gửi tặng thầy cô</div>
+
+            <button type="button" class="gift-card" onclick="hideGiftOverlay()" aria-label="Mở thiệp tri ân thầy cô">
+                <img src="./image/bang-xanh-2011.jpg" alt="Minh họa ngày 20/11 bằng phấn trắng trên bảng xanh, cùng sách và dụng cụ lớp học">
+                <span class="chalk-dust" aria-hidden="true">
+                    <span style="--dust-x: 9%; --dust-y: 26%; --dust-size: 3px; --dust-delay: 0s"></span>
+                    <span style="--dust-x: 87%; --dust-y: 20%; --dust-size: 3px; --dust-delay: .7s"></span>
+                    <span style="--dust-x: 16%; --dust-y: 66%; --dust-size: 2px; --dust-delay: 1.4s"></span>
+                    <span style="--dust-x: 82%; --dust-y: 64%; --dust-size: 3px; --dust-delay: 2.1s"></span>
+                    <span style="--dust-x: 42%; --dust-y: 12%; --dust-size: 2px; --dust-delay: 2.8s"></span>
+                    <span style="--dust-x: 66%; --dust-y: 81%; --dust-size: 2px; --dust-delay: 3.4s"></span>
+                </span>
+            </button>
 
             <div class="gift-subtitle">Chạm vào ảnh</div>
         </div>
     </div>
 
-    <svg style="display: none;" id="theSvg" viewBox="-120 -30 240 180" enable-background="new 0 0 174 148"
+
+
+    <div id="castle" style="display: none;">
+    <svg style="display: none;" id="theSvg" viewBox="-120 0 240 86" enable-background="new 0 0 174 148"
         xml:space="preserve">
         <defs>
             <filter id="f" filterUnits="userSpaceOnUse" x="-120" y="-30" width="120%" height="120%">
@@ -782,26 +933,37 @@
                 <feComposite in="color" in2="shadow" operator="in" />
                 <feComposite in="SourceGraphic" />
             </filter>
-            <path id="shape" d="M0, 21.054 
-       C0, 21.054 24.618, -15.165 60.750, 8.554 
-       C93.249, 29.888 57.749, 96.888 0, 117.388
-       C-57.749, 96.888  -93.249, 29.888 -60.750, 8.554
-       C-24.618, -15.165  -0, 21.054 -0, 21.054z    
-    " />
+            <path id="shape" d="M-109,68 C-75,25 -35,25 0,25 C35,25 75,25 109,68" />
             <path id="partialPath" />
 
         </defs>
 
-        <text dy="-2">
-            <textPath style="font-family: fantasy;" xlink:href="#partialPath" startOffset="12">
-                🌹Happy Women's Day
-                🌹....................................................................................................................................🌹Happy Women's Day!🌹
-            </textPath>
+        <text dy="-2" textLength="218" lengthAdjust="spacingAndGlyphs">
+            <textPath xlink:href="#partialPath" startOffset="4">Chúc mừng Ngày Nhà giáo Việt Nam 20/11</textPath>
         </text>
 
         <use id="useThePath" xlink:href="#partialPath" stroke="white" stroke-width=".5" stroke-opacity=".5" fill="none"
             style="display:none;" />
     </svg>
+        <div class="letter">
+            <div class="envelope-interaction" role="button" tabindex="0" aria-label="Mở thư tri ân">
+                <div class="envelope"></div>
+                <div class="front"></div>
+                <div class="card">
+                    <div class="text">Tri ân thầy cô <span class="card-date">20/11</span></div>
+                </div>
+                <div class="petals" aria-hidden="true">
+                    <span style="--petal-x: 12%; --petal-delay: 0s"></span>
+                    <span style="--petal-x: 28%; --petal-delay: .8s"></span>
+                    <span style="--petal-x: 57%; --petal-delay: .3s"></span>
+                    <span style="--petal-x: 76%; --petal-delay: 1.2s"></span>
+                </div>
+            </div>
+            <div class="shadow"></div>
+        </div>
+
+    </div>
+
 
     <script>
         let rid = null; // request animation id
@@ -972,29 +1134,6 @@
         }
     </script>
 
-    <div id="castle" style="display: none;">
-        <div class="letter">
-            <div class="valentines">
-                <div class="envelope"></div>
-                <div class="front"></div>
-                <div class="card">
-                    <div class="text">Happy</br> Women's</br> Day!</div>
-                    <div class="heart"></div>
-                </div>
-                <div class="hearts">
-                    <div class="one"></div>
-                    <div class="two"></div>
-                    <div class="three"></div>
-                    <div class="four"></div>
-                    <div class="five"></div>
-                </div>
-            </div>
-            <div class="shadow"></div>
-        </div>
-
-    </div>
-
-
     <div class="container" id="rose-t" style="display: none;">
         <svg viewBox="0 0 512 512">
             <path class="leafOne" d="M124.302,328.222c-2.466-2.901-5.036-5.334-7.648-7.212c-1.884-1.354-4.49-1.207-6.201,0.36
@@ -1057,31 +1196,10 @@
             <div class="boxLetter">
                 <i class="fa-solid fa-xmark"></i>
                 <div class="formLetter">
-                    <div class="heartLetter">
-                        <div class="heartLetterItem"></div>
-                    </div>
-                    <div class="heartLetter">
-                        <div class="heartLetterItem"></div>
-                    </div>
-                    
                     <div class="wrapperLetter">
-                        <div class="giftbox">
-                            <div class="img">
-                                <img src="./image/giftbox.png" alt="" style="cursor:pointer;" onclick="window.location.href='tulip.html'">
-                            </div>
-                        </div>
                         <div class="textLetter">
                             <h2></h2>
                             <p class="contentLetter"></p>
-                            <div class="heartAnimation">
-                                <img src="./image/heartAnimation.gif" alt="">
-                            </div>
-                        </div>
-                        <div class="mewmew1">
-                            <img src="./image/mewmew.gif" alt="">
-                        </div>
-                        <div class="mewmew2">
-                            <img src="./image/mewmew.gif" alt="">
                         </div>
                     </div>
                 </div>
@@ -1126,11 +1244,14 @@
             //         drawCBezier(newPoints, partialPath, index);
             //     }
             // }, 5000); // 5 giây
-            
+
             const head = document.getElementsByTagName('head')[0];
             let animationId = 1;
 
             function CreateMagicDust(x1, x2, y1, y2, sizeRatio, fallingTime, animationDelay, node = 'main') {
+                const destination = document.getElementById(node);
+                if (!destination) return;
+
                 let dust = document.createElement('span');
                 let animation = document.createElement('style');
                 animation.innerHTML = '\
@@ -1172,7 +1293,7 @@
                 head.appendChild(animation);
                 dust.classList.add('dustDef');
                 dust.setAttribute('style', `animation: blink${animationId++} ${fallingTime}s cubic-bezier(.71, .11, .68, .83) infinite ${animationDelay}s`);
-                document.getElementById(node).appendChild(dust);
+                destination.appendChild(dust);
             }
 
             // yes, I'm doing it manually to get the effect I want.. can be easily changed to render randomly
@@ -1201,60 +1322,74 @@
     </script>
 
     <script>
-        // .textLetter text h2
-        let indexText = 0;
-        let textLetter = document.querySelector('.textLetter h2');
-        const textLetterH2 = "Gửi em!";
-        let timoutTextLetter;
+        const textLetter = document.querySelector('.textLetter h2');
+        const textLetterContent = document.querySelector('.contentLetter');
+        const textLetterH2 = "Kính gửi thầy cô!";
+        const textLetterP = "Nhân ngày Nhà giáo Việt Nam 20/11, em kính chúc thầy cô luôn mạnh khỏe, hạnh phúc và có thật nhiều niềm vui trong công việc. Em cảm ơn thầy cô đã tận tâm dạy dỗ và luôn động viên em trong suốt những năm tháng học trò.";
 
-        function textCharLetter() {
-            if (indexText < textLetterH2.length) {
-                textLetter.textContent += textLetterH2[indexText];
-                indexText++;
-                setTimeout(indexText, 100);
+        function addLetterEffects(overlay) {
+            overlay.querySelector('.letter-effects')?.remove();
+            const effects = document.createElement('div');
+            effects.className = 'letter-effects';
+            effects.setAttribute('aria-hidden', 'true');
+
+            for (let index = 0; index < 18; index++) {
+                const petal = document.createElement('span');
+                petal.className = 'letter-petal';
+                petal.style.setProperty('--petal-left', ((index * 37) % 100) + '%');
+                petal.style.setProperty('--petal-size', (7 + index % 5) + 'px');
+                petal.style.setProperty('--petal-color', ['#dfbd78', '#f3dfac', '#9aaf87'][index % 3]);
+                petal.style.setProperty('--petal-duration', (3.4 + (index % 4) * .3) + 's');
+                petal.style.setProperty('--petal-delay', (index * .075) + 's');
+                petal.style.setProperty('--petal-drift', (index % 2 ? 65 : -65) + 'px');
+                effects.appendChild(petal);
             }
-            else {
-                clearInterval(timoutTextLetter);
-                setTimeout(() => {
-                    funcTimeoutLetterContent()
-                }, 500)
-            }
-        }
-        function funcTimeoutLetter() {
-            indexText = 0; // Reset indexText
-            textLetter.textContent = ''; // Xóa nội dung hiện tại của textLetter
-            clearInterval(timoutTextLetter);
-            timoutTextLetter = setInterval(() => {
-                textCharLetter();
-            }, 200)
+
+            overlay.prepend(effects);
         }
 
-        // chữ của thư bạn muốn gửi
-        let indexTextContent = 0;
-        let textLetterContent = document.querySelector('.contentLetter');
-        const textLetterP = "Hôm nay là ngày 20/10. Xin gửi lời chúc tới người tôi yêu thương nhất. Luôn vui vẻ, luôn hạnh phúc và luôn may mắn trong cuộc sống, ngày càng xinh đẹp. Xin gửi tất cả lời chúc tốt đẹp đến với em. Love You ❤️";
-        let timoutTextLetterContent;
-        function textCharLetterContent() {
-            if (indexTextContent < textLetterP.length) {
-                textLetterContent.textContent += textLetterP[indexTextContent];
-                indexTextContent++;
-                setTimeout(indexTextContent, 1);
-            }
-            else {
-                clearInterval(timoutTextLetterContent)
+        function animateLetterText(element, text, startDelay, characterDelay) {
+            const fragment = document.createDocumentFragment();
+            const segmenter = typeof Intl.Segmenter === 'function'
+                ? new Intl.Segmenter('vi', { granularity: 'grapheme' })
+                : null;
+            let characterIndex = 0;
 
-            }
+            text.split(' ').forEach((word, wordIndex) => {
+                if (wordIndex > 0) fragment.appendChild(document.createTextNode(' '));
+                const wordSpan = document.createElement('span');
+                wordSpan.className = 'letter-word';
+                const characters = segmenter
+                    ? Array.from(segmenter.segment(word), item => item.segment)
+                    : Array.from(word.normalize('NFC'));
+
+                characters.forEach(character => {
+                    const span = document.createElement('span');
+                    span.className = 'letter-character';
+                    span.textContent = character;
+                    span.style.setProperty('--character-delay', (startDelay + characterIndex * characterDelay) + 'ms');
+                    span.style.setProperty('--character-step', characterDelay + 'ms');
+                    wordSpan.appendChild(span);
+                    characterIndex++;
+                });
+
+                fragment.appendChild(wordSpan);
+            });
+
+            element.replaceChildren(fragment);
         }
-        function funcTimeoutLetterContent() {
-            indexTextContent = 0; // Reset indexTextContent
-            textLetterContent.textContent = ''; // Xóa nội dung hiện tại của textLetter
-            clearInterval(timoutTextLetterContent);
-            timoutTextLetterContent = setInterval(() => {
-                textCharLetterContent();
-            }, 100)
+        function revealLetter() {
+            animateLetterText(textLetter, textLetterH2, 140, 24);
+            animateLetterText(textLetterContent, textLetterP, 600, 12);
+            const overlay = document.querySelector('.wrapperLetterForm');
+            overlay.scrollTop = 0;
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                addLetterEffects(overlay);
+            }
+            $('.wrapperLetterForm').stop(true, true).show().addClass('is-open');
         }
         $(document).ready(function () {
-            $('.valentines').mouseenter(function () {
+            $('.envelope-interaction').mouseenter(function () {
                 $('.card').stop().animate({
                     top: '-90px'
                 }, 'slow');
@@ -1264,10 +1399,10 @@
                 }, 'slow');
             });
 
-            $('.card').click(function () {
-                $('.box-content').addClass('active');
-                $(".wrapperLetterForm").fadeIn()
-                funcTimeoutLetter();
+            $('.envelope-interaction').on('click keydown', function (event) {
+                if (event.type === 'keydown' && event.key !== 'Enter' && event.key !== ' ') return;
+                event.preventDefault();
+                revealLetter();
             });
 
             $('.fa-xmark').click(function () {
@@ -1316,28 +1451,28 @@
             },
             complete: function (anim) {
                 //Leaf One
-                leafOne.setAttribute("fill", "#9CDD05");
+                leafOne.setAttribute("fill", "#6f8e59");
                 leafOne.setAttribute("stroke", "none");
                 //Leaf Two 
-                leafTwo.setAttribute("fill", "#9CDD05");
+                leafTwo.setAttribute("fill", "#6f8e59");
                 leafTwo.setAttribute("stroke", "none");
                 //Stick
-                stickLine.setAttribute("fill", "#83AA2E");
+                stickLine.setAttribute("fill", "#456b55");
                 stickLine.setAttribute("stroke", "none");
                 // Leaf S1
-                leafS1.setAttribute("fill", "#9CDD05");
+                leafS1.setAttribute("fill", "#6f8e59");
                 leafS1.setAttribute("stroke", "none");
                 // Rose 1
-                rose1.setAttribute("fill", "#F37D79");
+                rose1.setAttribute("fill", "#dfab53");
                 rose1.setAttribute("stroke", "none");
                 // Rose 2
-                rose2.setAttribute("fill", "#D86666");
+                rose2.setAttribute("fill", "#b87d34");
                 rose2.setAttribute("stroke", "none");
                 // Rose 3
-                rose3.setAttribute("fill", "#F37D79");
+                rose3.setAttribute("fill", "#dfab53");
                 rose3.setAttribute("stroke", "none");
                 // Rose 3
-                rose4.setAttribute("fill", "#D86666");
+                rose4.setAttribute("fill", "#b87d34");
                 rose4.setAttribute("stroke", "none");
             },
             autoplay: false,
@@ -1370,21 +1505,32 @@
         }
 
         // Function để ẩn giao diện tặng nè và hiện bông hoa
-        function hideGiftOverlay() {
-            document.getElementById('giftOverlay').style.display = 'none';
-            
-            // Hiện bông hoa luôn khi click vào hình
+        async function hideGiftOverlay() {
+            const overlay = document.getElementById('giftOverlay');
+            if (overlay.dataset.opening) return;
+            overlay.dataset.opening = 'true';
+            overlay.querySelector('.gift-card').disabled = true;
             document.querySelector("#rose-t").style.display = "flex";
+
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                const transition = overlay.animate(
+                    [{ opacity: 1 }, { opacity: 0 }],
+                    { duration: 380, easing: 'ease-out', fill: 'forwards' }
+                );
+                await transition.finished;
+            }
+
+            overlay.style.display = 'none';
             lineDrawing.play();
-            
+
             // Sau 4.5 giây thì chuyển sang giao diện thư và hiện SVG text animation cùng lúc
             setTimeout(() => {
                 document.querySelector("#rose-t").style.display = "none";
                 document.querySelector("#castle").style.display = "flex";
-                
+
                 // Hiện SVG text animation cùng lúc với bức thư
                 document.getElementById('theSvg').style.display = 'block';
-                
+
                 // Kích hoạt SVG animation ngay lập tức
                 if (typeof startAnimation === 'function') {
                     startAnimation();
